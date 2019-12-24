@@ -1,6 +1,6 @@
 # civ
 
-A simple CSV interacutive viewer.
+A simple CSV interactive viewer.
 
 # Demo
 
