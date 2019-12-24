@@ -25,6 +25,7 @@ $ civ [options] [FILE]
 
 * civ reads data from stdin if no file is specified.
 * civ processes the first line as a header line by default. If the first line of the file is not header line please use `-H` option to set dummy headers.
+* `-d` option allows a speciial argument `\t` to parse TSV.
 
 # Query Buffer
 
