@@ -86,3 +86,9 @@ civ supports the incremental search hight-lighting the matched words.
 ## Filter Mode(`^`)
 
 civ supports the incremental filtering rows.
+
+## Limitation
+
+Since civ is continually being improved it has some limitations. These limitation might be resolved in the future.
+
+* Not supports multi-byte characters.
