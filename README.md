@@ -91,4 +91,4 @@ civ supports the incremental filtering rows.
 
 Since civ is continually being improved it has some limitations. These limitation might be resolved in the future.
 
-* Not supports multi-byte characters.
+* ~~Not supports multi-byte characters.~~

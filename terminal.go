@@ -82,12 +82,13 @@ func formatCell(cell Cell, maxSize int, isHeader bool) []termbox.Cell {
 	var beforeSpaces int
 	var afterSpaces int
 
+	cells := runewidth.StringWidth(cell.data)
 	if isHeader {
-		beforeSpaces = ((maxSize + 2) - len(cell.data) + 1) / 2
-		afterSpaces = maxSize + 2 - len(cell.data) - beforeSpaces
+		beforeSpaces = ((maxSize + 2) - cells + 1) / 2
+		afterSpaces = maxSize + 2 - cells - beforeSpaces
 	} else {
 		beforeSpaces = 1
-		afterSpaces = ((maxSize + 1) - len(cell.data))
+		afterSpaces = ((maxSize + 1) - cells)
 	}
 
 	// pad before data by space

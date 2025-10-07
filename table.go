@@ -2,6 +2,7 @@ package civ
 
 import (
 	"fmt"
+	"github.com/mattn/go-runewidth"
 	"strconv"
 )
 
@@ -64,7 +65,7 @@ func NewTable(indata [][]string, dummyHeader bool) *Table {
 
 		// initialize the maximum lenght of column by
 		// the header data
-		t.maxLen[i] = len(cell)
+		t.maxLen[i] = runewidth.StringWidth(cell)
 	}
 
 	// Load table data
@@ -85,8 +86,9 @@ func NewTable(indata [][]string, dummyHeader bool) *Table {
 			}
 			r.cols = append(r.cols, *c)
 
-			if t.maxLen[i] < len(cell) {
-				t.maxLen[i] = len(cell)
+			cells := runewidth.StringWidth(cell)
+			if t.maxLen[i] < cells {
+				t.maxLen[i] = cells
 			}
 		}
 		t.contents = append(t.contents, r)
